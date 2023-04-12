@@ -1,0 +1,92 @@
+section.pitch {
+  min-height: calc(100vh - 70px);
+  background-color: var(--bg-cream);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .phraseProfession {
+    padding-top: 100px;
+    width: 100%;
+
+    h1 {
+
+      text-align: center;
+      font-size: 2.4rem;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      font-family: var(--ff-syne);
+      font-weight: 800;
+      letter-spacing: -0.025rem;
+    }
+
+    .phraseWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .black-line {
+      height: 4px;
+      width: 100px;
+      background-color: black;
+    }
+
+    .phraseName {
+      color: var(--fc-second);
+      font-weight: 700;
+      font-size: 1.5rem;
+      font-family: var(--ff-overpass);
+    }
+  }
+
+  .send-a-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: 4px solid black;
+      font-family: var(--ff-overpass);
+      font-weight: 400;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      background-color: transparent;
+    }
+  }
+
+  .pitch-footer-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    font-family: var(--ff-overpass);
+    font-weight: 300;
+    font-size: 1.5rem;
+
+    .email {
+      position: absolute;
+      top: 92px;
+      left: -63px;
+      display: flex;
+      justify-content: flex-start;
+
+      transform: rotate(-90deg);
+
+      a {
+        text-decoration: none;
+        font-family: var(--ff-overpass);
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+
+  }
+
+}
