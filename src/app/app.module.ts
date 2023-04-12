@@ -8,13 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { PitchComponent } from './pitch/pitch.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PitchComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,71 @@
+section.skills {
+  padding: 100px 0;
+
+  .frame {
+    border: 4px solid black;
+    margin: 0 20px;
+    position: relative;
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+  }
+
+  h2 {
+    position: absolute;
+    top: -30px;
+    left: calc((100vw - 280px - 40px) * 0.5);
+    font-size: 2.5rem;
+    font-family: var(--ff-syne);
+    font-weight: 800;
+    background-color: var(--bg-cream);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    width: 280px;
+
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      transform: translateY(-3px);
+
+      // LINK https://isotropic.co/tool/hex-color-to-css-filter/
+
+      filter: invert(42%) sepia(96%) saturate(808%) hue-rotate(130deg) brightness(101%) contrast(103%);
+      transition: all 125ms ease-in-out;
+    }
+
+    img {
+      height: 3rem;
+      object-fit: contain;
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .arrow-left-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    img {
+      transform: scaleX(-1);
+    }
+  }
+
+}

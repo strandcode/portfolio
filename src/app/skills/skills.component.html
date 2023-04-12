@@ -1,0 +1,18 @@
+<section class="skills">
+  <div class="frame">
+
+    <h2>My skills</h2>
+
+    <div *ngFor="let skill of skills; let i = index" class="skill-item">
+      <img src="{{ skill.skillIconPath }}" alt="{{ skill.skillName }}">
+      <span>{{ skill.skillName }}</span>
+    </div>
+
+
+  </div>
+
+  <div class="arrow-left-wrapper">
+    <img src="../../assets/img/mobile-arrow-left.png
+" alt="">
+  </div>
+</section>
