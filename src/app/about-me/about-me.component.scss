@@ -1,0 +1,40 @@
+section.about-me {
+  background-color: var(--bg-cream);
+
+  h2 {
+    font-family: var(--ff-syne);
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 50px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  p {
+    font-family: var(--ff-overpass);
+    font-size: 1.5rem;
+  }
+
+  .text-wrapper {
+    padding: 20px;
+  }
+
+  .profile-wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  .arrow-left-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+}
