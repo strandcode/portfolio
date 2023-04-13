@@ -1,0 +1,49 @@
+section.portfolio {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  h2 {
+    font-family: var(--ff-syne);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+  }
+
+  p {
+    font-family: var(--ff-overpass);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+
+  .portfolio-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .portfolio-number {
+    font-family: var(--ff-syne);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 30px;
+  }
+
+  .portfolio-image-wrapper {
+    width: 100%;
+
+
+    img {
+      width: 100%;
+      filter: grayscale(0.9);
+    }
+  }
+
+  .arrow-left-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

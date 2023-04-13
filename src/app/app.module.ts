@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { PitchComponent } from './pitch/pitch.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SkillsComponent } from './skills/skills.component';
     HeaderComponent,
     PitchComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
