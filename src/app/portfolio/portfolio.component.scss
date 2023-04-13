@@ -2,6 +2,7 @@ section.portfolio {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  scroll-margin: 30px;
 
   h2 {
     font-family: var(--ff-syne);
@@ -20,6 +21,23 @@ section.portfolio {
 
   .portfolio-wrapper {
     margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .portfolio-wrapper:nth-child(even) {
+
+    .portfolio-number {
+      text-align: left;
+    }
+
+    .portfolio-image-wrapper {
+      justify-content: flex-end;
+    }
+
+
   }
 
   .portfolio-number {
@@ -27,23 +45,38 @@ section.portfolio {
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
+    padding-bottom: 10px;
     width: 100%;
     text-align: right;
-    padding-bottom: 30px;
   }
 
   .portfolio-image-wrapper {
     width: 100%;
-
+    display: flex;
+    justify-content: flex-start;
 
     img {
-      width: 100%;
+      width: 80%;
       filter: grayscale(0.9);
     }
   }
 
+
+
   .arrow-left-wrapper {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  section.portfolio {
+
+
+
+    .arrow-left-wrapper {
+      justify-content: flex-end;
+      margin-right: 100px;
+    }
   }
 }

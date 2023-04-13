@@ -1,6 +1,5 @@
 section.pitch {
   min-height: 100vh;
-  background-color: var(--bg-cream);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,6 @@ section.pitch {
     width: 100%;
 
     h1 {
-
       text-align: center;
       font-size: 2.4rem;
       margin-block-start: 0;
@@ -75,7 +73,7 @@ section.pitch {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 20px;
+    padding: 20px 0;
     font-family: var(--ff-overpass);
     font-weight: 300;
     font-size: 1.5rem;
@@ -122,4 +120,38 @@ section.pitch {
 
   }
 
+}
+
+@media screen and (min-width: 765px) {
+  section.pitch {
+    .phraseProfession {
+      padding-top: 200px;
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      .black-line {
+        width: 250px;
+      }
+
+      .phraseName {
+        font-size: 2.5rem;
+      }
+    }
+
+    .send-a-message {
+      display: none;
+    }
+
+    .pitch-footer-wrapper {
+      padding: 20px 0;
+
+      .email {
+        left: -63px;
+      }
+
+
+    }
+  }
 }

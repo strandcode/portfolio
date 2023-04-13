@@ -3,7 +3,6 @@ header {
   justify-content: space-between;
   padding: 10px;
   height: 70px;
-  // border-bottom: 2px solid rebeccapurple;
   background-color: var(--bg-cream);
   position: fixed;
   top: 0;
@@ -100,4 +99,10 @@ header {
 
   }
 
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 10px 50px;
+  }
 }
