@@ -5,7 +5,10 @@
   --fc-second: #00BC8F;
   --ff-syne: 'Syne', sans-serif;
   --ff-overpass: 'Overpass', sans-serif;
+}
 
+html {
+  scroll-behavior: smooth;
 }
 
 * {

@@ -1,4 +1,24 @@
 <header>
-  <mat-icon class="icons">home</mat-icon>
-  <mat-icon class="icons">menu</mat-icon>
+  <!-- TODO Logo animation -->
+  <div class="logo">
+    <span class="green rotate-left">[</span>
+    <span class="fly-in">S</span>
+    <span class="fly-in">a</span>
+    <span class="fly-in">S</span>
+    <span class="fly-in">c</span>
+    <span class="green rotate-left">]</span>
+  </div>
+
+  <mat-icon id="burgerMenu" class="icons" (click)="toggleMenu()">menu</mat-icon>
+
+  <div *ngIf="isMenuOpen" class="dropdown-menu">
+    <a href="../../index.html" (click)="toggleMenu()">Home</a>
+    <a href="#aboutMe" (click)="toggleMenu()">About me</a>
+    <a href="#mySkills" (click)="toggleMenu()">My skills</a>
+    <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
+    <a href="#contactMe" (click)="toggleMenu()">Contact me</a>
+    <a href="#" (click)="toggleMenu()">Legal Notice</a>
+    <a href="#" (click)="toggleMenu()">Privacy Policy</a>
+  </div>
+
 </header>

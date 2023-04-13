@@ -5,11 +5,99 @@ header {
   height: 70px;
   // border-bottom: 2px solid rebeccapurple;
   background-color: var(--bg-cream);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+
+  .logo {
+    font-size: 28px;
+    font-family: var(--ff-overpass);
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .green {
+      color: var(--fc-second);
+    }
+
+    .rotate-left {
+      animation: rotateLeft 500ms ease-in-out 1200ms forwards;
+    }
+
+    @keyframes rotateLeft {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-8deg);
+      }
+    }
+
+    .fly-in {
+      animation: animateFly 1s ease-in-out forwards;
+    }
+
+    @keyframes animateFly {
+      from {
+        transform: rotate(-180deg) translateX(-500px);
+      }
+
+      to {
+        transform: rotate(0deg) translateX(0px);
+
+      }
+    }
+
+  }
 
   .icons {
     font-size: 48px;
     height: 50px;
     width: 50px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--fc-second);
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    color: blue;
+    background-color: var(--bg-cream);
+
+    z-index: 7;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-syne);
+    font-size: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: all ease-in-out 125ms;
+      padding: 5px 0;
+
+      &:hover {
+        color: var(--fc-second);
+        transform: translateY(-2px) scale(1.05);
+        transition: all ease-in-out 125ms;
+
+      }
+    }
+
   }
 
 }
