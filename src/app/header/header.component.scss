@@ -1,7 +1,8 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   height: 70px;
   background-color: var(--bg-cream);
   position: fixed;
@@ -99,10 +100,4 @@ header {
 
   }
 
-}
-
-@media screen and (min-width: 768px) {
-  header {
-    padding: 10px 50px;
-  }
 }

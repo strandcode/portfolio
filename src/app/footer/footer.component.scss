@@ -1,6 +1,8 @@
 footer {
   background-color: black;
-  padding: 50px 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 
   .footer-top {
     display: flex;
@@ -66,6 +68,10 @@ footer {
         transition: all 125ms ease-in-out;
       }
     }
+
+    .email-logo {
+      display: none;
+    }
   }
 
 
@@ -92,6 +98,7 @@ footer {
     .mpos-3 {
       order: 3;
     }
+
 
 
 
@@ -123,13 +130,22 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+  .footer-top {
+    .social-wrapper {
+
+      .email-logo {
+        display: flex;
+      }
+    }
+  }
+
   .footer-bottom {
     flex-direction: row !important;
     justify-content: space-between !important;
   }
 
   .mpos-1 {
-    order: 2 !important;
+    display: none;
   }
 
   .mpos-2 {

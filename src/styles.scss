@@ -22,6 +22,52 @@ body {
   // background-color: green;
 }
 
+section {
+  scroll-margin: 50px;
+}
+
+header,
+section,
+footer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 425px) {
+
+  header,
+  section,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  header,
+  section,
+  footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  header,
+  section,
+  footer {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+
+
+
+
+
 
 // LEGAL Download fonts
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
