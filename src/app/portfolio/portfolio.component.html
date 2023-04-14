@@ -4,8 +4,8 @@
     This page is a sample of my work - please feel free to try them out.
   </p>
 
-  <div class="portfolio-wrapper">
-    <div class="portfolio-number">project 01/03</div>
+  <div *ngFor="let portfolio of portfolioData; let i = index;" class="portfolio-wrapper">
+    <div class="portfolio-number"> 0{{ i + 1 }}/{{ generateLength() }} </div>
     <div class="portfolio-container">
 
       <div class="portfolio-image-wrapper">
@@ -14,44 +14,16 @@
       </div>
 
       <div class="portfolio-description">
-        <h3>Join</h3>
-        <h4>JavaScript | CSS | HTML</h4>
-        <p>Task manager inspired by the Kanban Sytem. Create and organize tasks using drag and drop functions, assign
-          users and categories.
-        </p>
+        <h3>{{ portfolioData[i].portfolioTitle }}</h3>
+        <h4>{{ portfolioData[i].portfolioSkills }}</h4>
+        <p>{{ portfolioData[i].portfolioDescription }}</p>
         <div class="link-wrapper">
-          <a href="#">GitHub</a>
-          <a href="#">Link</a>
+          <a href="{{ portfolioData[i].portfolioLink }}">Link</a>
+          <a href="{{ portfolioData[i].portfolioLinkGitHub }}">GitHub</a>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="portfolio-wrapper">
-    <div class="portfolio-number">02/03</div>
-    <div class="portfolio-container">
-
-      <div class="portfolio-image-wrapper">
-        <img src="./assets/img/portfolio-image-dummy.png" alt="">
-        <div class="black-frame"></div>
-      </div>
-
-      <div class="portfolio-description">
-        <h3>Join</h3>
-        <h4>Angular | TypeScript | Firebase | HTML | CSS</h4>
-        <p>Task manager inspired by the Kanban Sytem. Create and organize tasks using drag and drop functions, assign
-          users and categories.
-        </p>
-        <div class="link-wrapper">
-          <a href="#">GitHub</a>
-          <a href="#">Link</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
 
   <div class="arrow-left-wrapper">
     <img src="./assets/img/mobile-arrow-left.png
