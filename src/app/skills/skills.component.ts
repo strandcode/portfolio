@@ -15,7 +15,7 @@ export class SkillsComponent {
     { skillName: "CSS", skillIconPath: "./assets/img/skill-css.png" },
     { skillName: "Firebase", skillIconPath: "./assets/img/skill-firebase.png" },
     { skillName: "Git", skillIconPath: "./assets/img/skill-git.png" },
-    { skillName: "Rest-Api", skillIconPath: "./assets/img/skill-rest-api.png" },
+    { skillName: "REST-Api", skillIconPath: "./assets/img/skill-rest-api.png" },
     { skillName: "Scrum", skillIconPath: "./assets/img/skill-scrum.png" },
     { skillName: "Material-Design", skillIconPath: "./assets/img/skill-material-design.png" },
   ]
