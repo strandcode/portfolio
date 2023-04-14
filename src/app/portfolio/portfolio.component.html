@@ -5,12 +5,13 @@
   </p>
 
   <div *ngFor="let portfolio of portfolioData; let i = index;" class="portfolio-wrapper">
-    <div class="portfolio-number"> 0{{ i + 1 }}/{{ generateLength() }} </div>
+    <div class="portfolio-number"> {{ doubleDigit(i + 1) }}/{{ doubleDigit(portfolioData.length) }} </div>
     <div class="portfolio-container">
 
       <div class="portfolio-image-wrapper">
-        <img src="./assets/img/portfolio-image-dummy.png" alt="">
+        <img src=" {{ portfolioData[i].portfolioImage }}" alt="">
         <div class="black-frame"></div>
+        <img class="portfolio-arrow" src="./assets/img/portfolio-arrow.png" alt="">
       </div>
 
       <div class="portfolio-description">
@@ -18,8 +19,8 @@
         <h4>{{ portfolioData[i].portfolioSkills }}</h4>
         <p>{{ portfolioData[i].portfolioDescription }}</p>
         <div class="link-wrapper">
-          <a href="{{ portfolioData[i].portfolioLink }}">Link</a>
-          <a href="{{ portfolioData[i].portfolioLinkGitHub }}">GitHub</a>
+          <a href="{{ portfolioData[i].portfolioLink }}" target="_blank">Link</a>
+          <a href="{{ portfolioData[i].portfolioLinkGitHub }}" target="_blank">GitHub</a>
         </div>
       </div>
     </div>

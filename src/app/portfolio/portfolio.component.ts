@@ -10,13 +10,15 @@ export class PortfolioComponent {
   portfolioData = [
     {
       portfolioTitle: "Join",
+      portfolioImage: "./assets/img/portfolio-join.png",
       portfolioSkills: "JavaScript | CSS | HTML",
       portfolioDescription: "Task manager inspired by the Kanban Sytem. Create and organize tasks using drag and drop functions, assign users and categories.",
-      portfolioLink: "#",
+      portfolioLink: "https://gruppe-05i.developerakademie.net/join/",
       portfolioLinkGitHub: "#"
     },
     {
       portfolioTitle: "El Pollo Loco",
+      portfolioImage: "./assets/img/portfolio-el-pollo-loco.png",
       portfolioSkills: "JavaScript | CSS | HTML",
       portfolioDescription: "A simple jump-and-run game based on an object-oriented approach. Help Pepe to find coins an fight against the angry rooster.",
       portfolioLink: "#",
@@ -24,6 +26,7 @@ export class PortfolioComponent {
     },
     {
       portfolioTitle: "Simple CRM",
+      portfolioImage: "./assets/img/portfolio-image-dummy.png",
       portfolioSkills: "Angular | Firebase",
       portfolioDescription: "A very simple Customer Relationship Management system working with CRUD functionality.",
       portfolioLink: "#",
@@ -31,9 +34,10 @@ export class PortfolioComponent {
     },
     {
       portfolioTitle: "Pokédex",
+      portfolioImage: "./assets/img/portfolio-pokedex.png",
       portfolioSkills: "JavaScript | API | CSS | HTML",
       portfolioDescription: "Based on the PokéAPI a simple library that provides and catalogues pokémon information.",
-      portfolioLink: "#",
+      portfolioLink: "https://sascha-schroeder.developerakademie.net/pokedex/",
       portfolioLinkGitHub: "#"
     },
   ];
@@ -41,16 +45,16 @@ export class PortfolioComponent {
 
 
 
-  generateLength() {
-    let portfolioCount: any = '';
+  doubleDigit(x: number) {
+    let doubleDigit: any = '';
+    doubleDigit = x;
 
-    if (this.portfolioData.length < 10) {
-      portfolioCount = this.portfolioData.length;
-      portfolioCount = portfolioCount.toString().padStart(2, '0');
+    if (x < 10) {
+      doubleDigit = doubleDigit.toString().padStart(2, '0');
     } else {
-      portfolioCount = portfolioCount.toString();
+      doubleDigit = doubleDigit.toString();
     }
-    return portfolioCount;
+    return doubleDigit;
   }
 
 

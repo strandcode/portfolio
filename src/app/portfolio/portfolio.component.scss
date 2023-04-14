@@ -26,7 +26,7 @@ section.portfolio {
     top: 3%;
     left: 3%;
     border: 5px solid black;
-    width: 80%;
+    width: 100%;
     height: 100%;
   }
 
@@ -45,13 +45,40 @@ section.portfolio {
       .portfolio-description {
         visibility: visible;
         transition: all 125ms ease-in-out;
-        animation: animateDescription 1s ease-in-out 0s 1 normal forwards;
+        animation: animateDescription 250ms ease-in-out 0s 1 normal forwards;
       }
 
 
       .black-frame {
         display: flex;
         transition: all 125ms ease-in-out;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 50px;
+          object-fit: contain;
+        }
+      }
+
+      .portfolio-arrow {
+        transition: all 125ms ease-in-out;
+        bottom: calc(-3% - 25px);
+        left: calc(53% - 25px);
+        animation: animatePortfolioArrow 250ms ease-in-out 0s 1 normal forwards;
+
+        @keyframes animatePortfolioArrow {
+          from {
+            transform: scale(0.3) rotate(0deg);
+            opacity: 0.1;
+          }
+
+          to {
+            transform: scale(1) rotate(180deg);
+            opacity: 1;
+          }
+        }
       }
 
       .portfolio-image-wrapper {
@@ -86,6 +113,11 @@ section.portfolio {
         left: unset;
         right: 3%;
       }
+
+      .portfolio-arrow {
+        transition: all 125ms ease-in-out;
+        left: calc(47% - 25px);
+      }
     }
 
   }
@@ -105,6 +137,7 @@ section.portfolio {
   .portfolio-container {
     display: flex;
     flex-direction: column;
+    gap: 30px;
   }
 
 
@@ -114,18 +147,31 @@ section.portfolio {
     justify-content: flex-start;
     position: relative;
     transition: all 125ms ease-in-out;
+    background-color: green;
 
     img {
-      width: 80%;
-      object-fit: fill;
+      width: 100%;
+      object-fit: cover;
+      object-position: top left;
       filter: grayscale(0.9);
+    }
+
+    .portfolio-arrow {
+      height: 50px;
+      width: 50px;
+      opacity: 0;
+
+      position: absolute;
+
+      bottom: calc(-3% - 25px);
+      left: calc(53% - 25px);
     }
   }
 
 
   .portfolio-description {
     display: flex;
-    visibility: hidden;
+    visibility: visible;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
@@ -224,15 +270,66 @@ section.portfolio {
 
 @media screen and (min-width: 1024px) {
   section.portfolio {
+
     .portfolio-container {
       display: flex;
       flex-direction: row;
+    }
+
+    .portfolio-wrapper {
+      &:hover {
+
+        .portfolio-arrow {
+          transition: all 125ms ease-in-out;
+          bottom: unset;
+          left: calc(103% - 25px);
+          top: calc(53% - 25px);
+
+          animation: animateT 250ms ease-in-out 0s 1 normal forwards;
+
+          @keyframes animateT {
+            from {
+              transform: scale(0.3) rotate(-90deg);
+              opacity: 0.1;
+            }
+
+            to {
+              transform: scale(1) rotate(90deg);
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
 
     .portfolio-wrapper:nth-child(even) {
 
       .portfolio-container {
         flex-direction: row-reverse;
+      }
+
+      &:hover {
+
+        .portfolio-arrow {
+          transition: all 125ms ease-in-out;
+          bottom: unset;
+          left: calc(-3% - 25px);
+          top: calc(53% - 25px);
+
+          animation: animateZ 250ms ease-in-out 0s 1 normal forwards;
+
+          @keyframes animateZ {
+            from {
+              transform: scale(0.3) rotate(-90deg);
+              opacity: 0.1;
+            }
+
+            to {
+              transform: scale(1) rotate(180deg);
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
