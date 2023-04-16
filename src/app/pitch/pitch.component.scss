@@ -6,12 +6,13 @@ section.pitch {
   justify-content: space-between;
 
   .phraseProfession {
-    padding-top: 100px;
+    padding-top: 50px;
     width: 100%;
 
     h1 {
+      width: 100%;
       text-align: center;
-      font-size: 2.4rem;
+      font-size: calc(10px + (7vw));
       margin-block-start: 0;
       margin-block-end: 0;
       font-family: var(--ff-syne);
@@ -24,19 +25,39 @@ section.pitch {
       align-items: center;
       justify-content: center;
       gap: 10px;
-    }
 
-    .black-line {
-      height: 4px;
-      width: 100px;
-      background-color: black;
-    }
+      padding: 0 10vw;
 
-    .phraseName {
-      color: var(--fc-second);
-      font-weight: 700;
-      font-size: 1.5rem;
-      font-family: var(--ff-overpass);
+      .black-line {
+        height: 4px;
+        width: 100%;
+        background-color: black;
+
+        animation: animateNameLine 1500ms ease-in-out 500ms 1 normal both;
+        transform-origin: right;
+
+        @keyframes animateNameLine {
+          from {
+            transform: scaleX(6) translateX(-1500px);
+          }
+
+          80% {
+            transform: scaleX(0.3) translateX(10px);
+          }
+
+          to {
+            transform: scaleX(1) translateX(0);
+          }
+        }
+
+      }
+
+      .phraseName {
+        color: var(--fc-second);
+        font-weight: 700;
+        font-size: calc(20px + (2vw));
+        font-family: var(--ff-overpass);
+      }
     }
   }
 
@@ -67,38 +88,41 @@ section.pitch {
   }
 
   .pitch-footer-wrapper {
-    background-color: coral;
-    position: relative;
-    width: 100%;
-    height: 250px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 20px;
     font-family: var(--ff-overpass);
     font-weight: 300;
     font-size: 1.5rem;
 
-    .email {
-      position: absolute;
-      top: 92px;
-      left: -63px;
-      display: flex;
-      justify-content: flex-start;
+    padding-bottom: 20px;
 
-      transform: rotate(-90deg);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    position: relative;
+
+    .email {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      transform-origin: left top;
+      transform: translateY(100px) rotate(-90deg);
+      height: 100px;
 
       a {
-        text-decoration: none;
         font-family: var(--ff-overpass);
         font-weight: 300;
         font-size: 1.5rem;
         color: black;
+        text-decoration: none;
+        padding-left: 5px;
         transition: all 125ms ease-in-out;
 
         &:hover {
           color: var(--fc-second);
-          transform: scale(1.02);
+          font-size: 110%;
           font-weight: 400;
           transition: all 125ms ease-in-out;
         }
@@ -106,19 +130,28 @@ section.pitch {
     }
 
     .scroll-down {
-      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 10px;
 
+      position: relative;
+
+      &:hover {
+        .scroll-text {
+          color: var(--fc-second);
+          transform: scale(1.1);
+          font-weight: 400;
+          transition: all 125ms ease-in-out;
+        }
+      }
 
       .scroll-line {
         height: 100px;
         width: 4px;
         background-color: var(--fc-second);
-        animation: animateScrollLine 1500ms ease-in-out 125ms 1 normal both;
+        animation: animateScrollLine 1500ms ease-in-out 1000ms 1 normal both;
         transform-origin: bottom;
 
         @keyframes animateScrollLine {
@@ -136,122 +169,23 @@ section.pitch {
         }
       }
 
-
-
       .scroll-text {
         cursor: pointer;
         text-decoration: none;
         color: black;
         transition: all 125ms ease-in-out;
 
-        &:hover {
-          color: var(--fc-second);
-          transform: scale(1.02);
-          font-weight: 400;
-          transition: all 125ms ease-in-out;
-        }
       }
     }
-
   }
-
 }
 
 @media screen and (min-width: 765px) {
   section.pitch {
-    .phraseProfession {
-      padding-top: 200px;
-
-      h1 {
-        font-size: 5rem;
-      }
-
-      .black-line {
-        width: 250px;
-      }
-
-      .phraseName {
-        font-size: 2.5rem;
-      }
-    }
 
     .send-a-message {
       display: none;
     }
 
-    .pitch-footer-wrapper {
-      padding: 20px 0;
-
-      .email {
-        left: -63px;
-      }
-
-
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  section.pitch {
-    .phraseProfession {
-      padding-top: 150px;
-
-      h1 {
-        font-size: 100px;
-      }
-
-      .phraseName {
-        font-size: 45px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  section.pitch {
-    .phraseProfession {
-
-      h1 {
-        font-size: 150px;
-      }
-
-      .black-line {
-        width: 400px;
-      }
-
-      .phraseName {
-        font-size: 67px;
-      }
-    }
-
-    .pitch-footer-wrapper {
-      padding: 20px 0;
-
-      .email {
-        position: absolute;
-        top: 10px;
-        left: -63px;
-        display: flex;
-        justify-content: flex-start;
-
-        transform: rotate(-90deg);
-
-        a {
-          text-decoration: none;
-          font-family: var(--ff-overpass);
-          font-weight: 300;
-          font-size: 2.0rem;
-          color: black;
-          transition: all 125ms ease-in-out;
-
-          &:hover {
-            color: var(--fc-second);
-            transform: scale(1.02);
-            font-weight: 400;
-            transition: all 125ms ease-in-out;
-          }
-        }
-      }
-    }
   }
 }
