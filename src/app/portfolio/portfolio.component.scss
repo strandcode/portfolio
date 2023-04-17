@@ -23,9 +23,9 @@ section.portfolio {
     display: none;
     transition: all 125ms ease-in-out;
     position: absolute;
-    top: 3%;
-    left: 3%;
-    border: 5px solid black;
+    top: 0;
+    left: 0;
+    outline: 5px solid black;
     width: 100%;
     height: 100%;
   }
@@ -64,8 +64,8 @@ section.portfolio {
 
       .portfolio-arrow {
         transition: all 125ms ease-in-out;
-        bottom: calc(-3% - 25px);
-        left: calc(53% - 25px);
+        bottom: calc(0% - 25px);
+        left: calc(50% - 25px);
         animation: animatePortfolioArrow 250ms ease-in-out 0s 1 normal forwards;
 
         @keyframes animatePortfolioArrow {
@@ -111,12 +111,12 @@ section.portfolio {
         display: flex;
         transition: all 125ms ease-in-out;
         left: unset;
-        right: 3%;
+        right: 0;
       }
 
       .portfolio-arrow {
         transition: all 125ms ease-in-out;
-        left: calc(47% - 25px);
+        left: calc(50% - 25px);
       }
     }
 
@@ -282,8 +282,8 @@ section.portfolio {
         .portfolio-arrow {
           transition: all 125ms ease-in-out;
           bottom: unset;
-          left: calc(103% - 25px);
-          top: calc(53% - 25px);
+          left: calc(100% - 25px);
+          top: calc(50% - 25px);
 
           animation: animateT 250ms ease-in-out 0s 1 normal forwards;
 
@@ -313,8 +313,8 @@ section.portfolio {
         .portfolio-arrow {
           transition: all 125ms ease-in-out;
           bottom: unset;
-          left: calc(-3% - 25px);
-          top: calc(53% - 25px);
+          left: calc(0% - 25px);
+          top: calc(50% - 25px);
 
           animation: animateZ 250ms ease-in-out 0s 1 normal forwards;
 

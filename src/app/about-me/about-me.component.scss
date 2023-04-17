@@ -6,6 +6,20 @@ section.about-me {
   flex-direction: column;
   gap: 20px;
 
+  &:hover {
+    h2 {
+      transition: all 125ms ease-in-out;
+      color: var(--fc-second);
+    }
+
+    .profile-wrapper {
+
+      .green-mouse {
+        animation: animateGreenMouse 4s ease-in-out 0ms infinite normal forwards;
+      }
+    }
+  }
+
   .wrapper-left {
     width: 100%;
   }
@@ -21,22 +35,7 @@ section.about-me {
     padding-top: 50px;
     margin-block-start: 0;
     margin-block-end: 0;
-    animation: animateHeading 5000ms ease-in-out infinite normal forwards;
-
-    @keyframes animateHeading {
-      from {
-        color: black;
-      }
-
-      80% {
-        color: var(--fc-second);
-      }
-
-      to {
-
-        color: black;
-      }
-    }
+    transition: all 125ms ease-in-out;
   }
 
   p {
@@ -52,37 +51,67 @@ section.about-me {
     width: 80%;
     display: flex;
     justify-content: center;
-    background-color: var(--bg-darkgreen);
+    // background-color: var(--bg-darkgreen);
+    background-color: #A9907E;
+    // background-color: transparent;
     position: relative;
 
-    .black-frame {
-      position: absolute;
-      top: 3%;
-      left: 3%;
-      border: 5px solid black;
-      width: 100%;
-      height: 100%;
-      animation: animateBlackFrame 5s ease-in-out infinite forwards;
-
-      @keyframes animateBlackFrame {
-        from {
-          border-color: transparent;
-        }
-
-        80% {
-          border-color: black;
-        }
-
-        to {
-          border-color: transparent;
-        }
-      }
-    }
-
     img {
-      width: 100%;
+      width: 80%;
       max-width: 500px;
       object-fit: contain;
+    }
+
+    .green-mouse {
+      width: 0;
+      height: 0;
+      background-color: var(--fc-second);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+
+      @keyframes animateGreenMouse {
+        from {
+          height: 5px;
+          width: 25%;
+        }
+
+        12% {
+          width: 100%;
+        }
+
+        22% {
+          height: 5px;
+        }
+
+        25% {
+          width: 5px;
+          left: unset;
+          right: 0;
+          top: 0;
+        }
+
+        37% {
+          height: 100%;
+          transform-origin: top;
+        }
+
+        47% {
+          width: 5px;
+          height: 25px;
+        }
+
+        50% {
+          top: unset;
+          left: unset;
+          bottom: 0;
+          right: 0;
+          height: 0;
+          width: 0;
+        }
+      }
+
     }
   }
 
