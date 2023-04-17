@@ -1,0 +1,42 @@
+ .logo {
+   font-size: 28px;
+   font-family: var(--ff-overpass);
+   font-weight: 900;
+   display: flex;
+   align-items: center;
+   position: relative;
+
+   .green {
+     color: var(--fc-second);
+   }
+
+   .rotate-left {
+     animation: rotateLeft 500ms ease-in-out 1200ms forwards;
+   }
+
+   @keyframes rotateLeft {
+     from {
+       transform: rotate(0deg);
+     }
+
+     to {
+       transform: rotate(-8deg);
+     }
+   }
+
+   .fly-in {
+     animation: animateFly 1s ease-in-out forwards;
+   }
+
+   @keyframes animateFly {
+     from {
+       transform: rotate(-180deg) translateX(-500px);
+     }
+
+     to {
+       transform: rotate(0deg) translateX(0px);
+
+     }
+   }
+
+ }

@@ -9,16 +9,19 @@
     <span class="green rotate-left">]</span>
   </div>
 
-  <mat-icon id="burgerMenu" class="icons" (click)="toggleMenu()">menu</mat-icon>
+  <div id="burgerMenu" class="burger-menu" (click)="toggleMenu()">
+    <span id="span-1"></span>
+    <span id="span-2"></span>
+    <span id="span-3"></span>
+  </div>
+
 
   <div *ngIf="isMenuOpen" class="dropdown-menu">
-    <a href="../../index.html" (click)="toggleMenu()">Home</a>
-    <a href="#aboutMe" (click)="toggleMenu()">About me</a>
-    <a href="#mySkills" (click)="toggleMenu()">My skills</a>
-    <a href="#myPortfolio" (click)="toggleMenu()">Portfolio</a>
-    <a href="#contactMe" (click)="toggleMenu()">Contact me</a>
-    <a href="#" (click)="toggleMenu()">Legal Notice</a>
-    <a href="#" (click)="toggleMenu()">Privacy Policy</a>
+    <div *ngFor="let navLink of navLinkData; let i = index;" class="nav-border">
+      <a class="nav-links" href="{{ navLinkData[i].link }}" (click)="toggleMenu()">{{ navLinkData[i].text }}</a>
+      <div class="nav-border-left"></div>
+      <div class="nav-border-bottom"></div>
+    </div>
   </div>
 
 </header>

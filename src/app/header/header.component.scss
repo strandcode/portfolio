@@ -1,6 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   height: 70px;
@@ -11,57 +12,30 @@ header {
   right: 0;
   z-index: 6;
 
-  .logo {
-    font-size: 28px;
-    font-family: var(--ff-overpass);
-    font-weight: 900;
+  // background-color: green;
+
+  .burger-menu {
+    height: 30px;
+    width: 40px;
     display: flex;
-    align-items: center;
-    position: relative;
-
-    .green {
-      color: var(--fc-second);
-    }
-
-    .rotate-left {
-      animation: rotateLeft 500ms ease-in-out 1200ms forwards;
-    }
-
-    @keyframes rotateLeft {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(-8deg);
-      }
-    }
-
-    .fly-in {
-      animation: animateFly 1s ease-in-out forwards;
-    }
-
-    @keyframes animateFly {
-      from {
-        transform: rotate(-180deg) translateX(-500px);
-      }
-
-      to {
-        transform: rotate(0deg) translateX(0px);
-
-      }
-    }
-
-  }
-
-  .icons {
-    font-size: 48px;
-    height: 50px;
-    width: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 125ms ease-in-out;
     cursor: pointer;
 
     &:hover {
-      color: var(--fc-second);
+      transition: all 125ms ease-in-out;
+
+      #span-2 {
+        background-color: var(--fc-second);
+        transform: translateX(-15px);
+      }
+    }
+
+    span {
+      width: 100%;
+      height: 20%;
+      background-color: black;
     }
   }
 
@@ -69,32 +43,88 @@ header {
     position: absolute;
     top: 70px;
     right: 0;
-    color: blue;
-    background-color: var(--bg-cream);
-
+    background-color: rgba(255, 252, 243, 0.99);
     z-index: 7;
     width: 100%;
-    min-height: calc(100vh - 70px);
-    padding: 20px;
+    padding: 100px 20px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: var(--ff-syne);
-    font-size: 1.5rem;
+    gap: 20px;
+
+    .nav-border {
+      padding: 5px 10px;
+      position: relative;
+      // background-color: rebeccapurple;
+
+      .nav-border-bottom {
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        width: 25px;
+        height: 4px;
+        transform-origin: left;
+        background-color: var(--fc-second);
+        transition: all 125ms ease-in-out;
+      }
+
+      .nav-border-left {
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        width: 4px;
+        height: 25px;
+        background-color: var(--fc-second);
+        transition: all 125ms ease-in-out;
+      }
+
+      &:hover {
+        .nav-border-left {
+          transition: all 125ms ease-in-out;
+          opacity: 0;
+        }
+
+        .nav-border-bottom {
+          left: unset;
+          right: 0;
+          transition: all 125ms ease-in-out;
+          animation: animateNavBorderBottom 125ms ease-in-out 50ms 1 normal both;
+
+          @keyframes animateNavBorderBottom {
+
+            from {
+              transform-origin: left;
+              width: 20px;
+              // transform: scaleX(25%);
+            }
+
+            to {
+              transform-origin: right;
+              width: 50%;
+              // transform: scaleX(2);
+
+            }
+
+          }
+        }
+      }
+
+    }
+
+
 
     a {
+      font-family: var(--ff-syne);
+      font-size: 1.5rem;
       text-decoration: none;
       color: black;
-      transition: all ease-in-out 125ms;
-      padding: 5px 0;
+      transition: all 125ms ease-in-out;
 
       &:hover {
         color: var(--fc-second);
-        transform: translateY(-2px) scale(1.05);
-        transition: all ease-in-out 125ms;
-
+        transition: all 125ms ease-in-out;
       }
     }
 
