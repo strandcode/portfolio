@@ -15,8 +15,12 @@ section.about-me {
     .profile-wrapper {
 
       .green-mouse {
-        animation: animateGreenMouse 4s ease-in-out 0ms infinite normal forwards;
+        animation: animateGreenMouse 4s ease-in-out 0ms 1 normal forwards;
       }
+    }
+
+    .arrow-left-wrapper {
+      animation: connectArrowLeft 1.5s ease-in-out 3700ms infinite alternate;
     }
   }
 
@@ -45,17 +49,19 @@ section.about-me {
 
   .wrapper-right {
     width: 100%;
+    // background-color: coral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .profile-wrapper {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    // background-color: var(--bg-darkgreen);
-    // background-color: #A9907E;
     background-color: rgba(0, 0, 0, 0.151);
-    // background-color: transparent;
     position: relative;
+    // background-color: rebeccapurple;
 
     img {
       width: 80%;
@@ -64,9 +70,9 @@ section.about-me {
     }
 
     .green-mouse {
-      width: 0;
-      height: 0;
-      background-color: var(--fc-second);
+      // width: 0;
+      // height: 0;
+      // background-color: var(--fc-second);
       // background-color: black;
       position: absolute;
       top: 0;
@@ -106,13 +112,34 @@ section.about-me {
         }
 
         50% {
-          background-color: black;
           top: unset;
           left: unset;
           bottom: 0;
           right: 0;
-          height: 0;
+          height: 5px;
           width: 0;
+        }
+
+        90% {
+          transform-origin: right;
+          width: 50%;
+          height: 5px;
+          bottom: 0;
+          right: 0;
+          top: unset;
+          left: unset;
+        }
+
+        to {
+          transform-origin: left;
+          bottom: 0;
+          right: 50%;
+          top: unset;
+          left: unset;
+          width: 5px;
+          height: 5px;
+          background-color: var(--fc-second);
+
         }
       }
 
@@ -122,7 +149,25 @@ section.about-me {
   .arrow-left-wrapper {
     display: flex;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: calc(50% - 75px);
+
+    img {
+      width: 150px;
+      object-fit: contain;
+      transition: all 125ms ease-in-out;
+
+      @keyframes connectArrowLeft {
+        from {
+          transform: translate(0, 0);
+        }
+
+        to {
+          transform: translate(-10px, 10px);
+        }
+      }
+
+      ;
+    }
   }
 
 }
