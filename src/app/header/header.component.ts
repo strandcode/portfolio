@@ -9,12 +9,12 @@ export class HeaderComponent {
   isMenuOpen: boolean = false;
 
   navLinkData = [
-    { link: "./index.html", text: "Home" },
+    { link: "#home", text: "Home" },
     { link: "#aboutMe", text: "About me" },
     { link: "#mySkills", text: "My skills" },
     { link: "#myPortfolio", text: "My portfolio" },
     { link: "#contactMe", text: "Contact me" },
-    // { link: "#", text: "Legal notice" },
+    { link: "./imprint/", text: "Legal notice" },
     // { link: "#", text: "Privacy policy" }
   ]
 

@@ -1,13 +1,13 @@
 <section id="contactMe" class="contact-form">
 
-  <h2>Hello!</h2>
+  <h2>Contact me!</h2>
   <h3>Want to discuss a new project?</h3>
   <p>Let's start and make your ideas happen!</p>
 
-  <form action="">
-    <input type="text" placeholder="Your name">
-    <input type="text" placeholder="Your email">
-    <textarea type="text" placeholder="Your message"></textarea>
-    <input type="button" value="Send message">
+  <form (submit)="sendMail()" ngNativeValidate #myForm>
+    <input type="text" name="name" placeholder="Your name" required #nameField>
+    <input type="email" name="email" placeholder="Your email" required #emailField>
+    <textarea type="text" name="message" placeholder="Your message" required #messageField></textarea>
+    <input type="submit" value="Send message" #sendButton>
   </form>
 </section>

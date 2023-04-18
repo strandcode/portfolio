@@ -4,12 +4,21 @@ section.portfolio {
   padding-top: 50px;
   padding-bottom: 50px;
 
+  &:hover {
+    h2 {
+      color: var(--fc-second);
+      transition: all 125ms ease-in-out;
+    }
+  }
+
+
   h2 {
     font-family: var(--ff-syne);
     font-size: 2.5rem;
     font-weight: 800;
     text-align: center;
     width: 100%;
+    transition: all 125ms ease-in-out;
   }
 
   p {

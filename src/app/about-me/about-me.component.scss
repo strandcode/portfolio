@@ -52,7 +52,8 @@ section.about-me {
     display: flex;
     justify-content: center;
     // background-color: var(--bg-darkgreen);
-    background-color: #A9907E;
+    // background-color: #A9907E;
+    background-color: rgba(0, 0, 0, 0.151);
     // background-color: transparent;
     position: relative;
 
@@ -66,6 +67,7 @@ section.about-me {
       width: 0;
       height: 0;
       background-color: var(--fc-second);
+      // background-color: black;
       position: absolute;
       top: 0;
       left: 0;
@@ -73,6 +75,7 @@ section.about-me {
 
       @keyframes animateGreenMouse {
         from {
+          background-color: var(--fc-second);
           height: 5px;
           width: 25%;
         }
@@ -103,6 +106,7 @@ section.about-me {
         }
 
         50% {
+          background-color: black;
           top: unset;
           left: unset;
           bottom: 0;
