@@ -12,6 +12,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { StartComponent } from './start/start.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,17 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     SkillsComponent,
     PortfolioComponent,
     FooterComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ImprintComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
