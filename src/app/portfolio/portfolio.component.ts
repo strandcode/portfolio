@@ -13,32 +13,32 @@ export class PortfolioComponent {
       portfolioImage: "./assets/img/portfolio-join.png",
       portfolioSkills: "JavaScript | CSS | HTML",
       portfolioDescription: "Task manager inspired by the Kanban Sytem. Create and organize tasks using drag and drop functions, assign users and categories.",
-      portfolioLink: "https://gruppe-05i.developerakademie.net/join/",
-      portfolioLinkGitHub: "#"
+      portfolioLink: "https://sascha-schroeder.developerakademie.net/join/",
+      portfolioLinkGitHub: "https://github.com/strandcode/join"
     },
     {
       portfolioTitle: "El Pollo Loco",
       portfolioImage: "./assets/img/portfolio-el-pollo-loco.png",
       portfolioSkills: "JavaScript | CSS | HTML",
       portfolioDescription: "A simple jump-and-run game based on an object-oriented approach. Help Pepe to find coins an fight against the angry rooster.",
-      portfolioLink: "#",
-      portfolioLinkGitHub: "#"
+      portfolioLink: "https://sascha-schroeder.developerakademie.net/el-pollo-loco/",
+      portfolioLinkGitHub: "https://github.com/strandcode/el-pollo-loco"
     },
-    {
-      portfolioTitle: "Simple CRM",
-      portfolioImage: "./assets/img/portfolio-image-dummy.png",
-      portfolioSkills: "Angular | Firebase",
-      portfolioDescription: "A very simple Customer Relationship Management system working with CRUD functionality.",
-      portfolioLink: "#",
-      portfolioLinkGitHub: "#"
-    },
+    // {
+    //   portfolioTitle: "Simple CRM",
+    //   portfolioImage: "./assets/img/portfolio-image-dummy.png",
+    //   portfolioSkills: "Angular | Firebase",
+    //   portfolioDescription: "A very simple Customer Relationship Management system working with CRUD functionality.",
+    //   portfolioLink: "#",
+    //   portfolioLinkGitHub: "#"
+    // },
     {
       portfolioTitle: "Pokédex",
       portfolioImage: "./assets/img/portfolio-pokedex.png",
       portfolioSkills: "JavaScript | API | CSS | HTML",
       portfolioDescription: "Based on the PokéAPI a simple library that provides and catalogues pokémon information.",
       portfolioLink: "https://sascha-schroeder.developerakademie.net/pokedex/",
-      portfolioLinkGitHub: "#"
+      portfolioLinkGitHub: "https://github.com/strandcode/pokedex"
     },
   ];
 
