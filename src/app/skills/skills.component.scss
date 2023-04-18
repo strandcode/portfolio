@@ -49,6 +49,10 @@ section.skills {
     cursor: pointer;
     transition: all 125ms ease-in-out;
 
+    span {
+      font-family: var(--ff-overpass);
+    }
+
     &:hover {
       transform: translateY(-3px);
 

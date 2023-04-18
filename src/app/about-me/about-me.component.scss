@@ -1,10 +1,11 @@
 section.about-me {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 
   &:hover {
     h2 {
@@ -25,10 +26,18 @@ section.about-me {
   }
 
   .wrapper-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
   }
 
-
+  .wrapper-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
 
 
   h2 {
@@ -36,7 +45,7 @@ section.about-me {
     font-weight: 800;
     font-size: 2.5rem;
     text-align: center;
-    padding-top: 50px;
+    // padding-top: 50px;
     margin-block-start: 0;
     margin-block-end: 0;
     transition: all 125ms ease-in-out;
@@ -45,15 +54,14 @@ section.about-me {
   p {
     font-family: var(--ff-overpass);
     font-size: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: var(--fc-second);
+    }
   }
 
-  .wrapper-right {
-    width: 100%;
-    // background-color: coral;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+
 
   .profile-wrapper {
     width: 100%;
@@ -120,7 +128,7 @@ section.about-me {
           width: 0;
         }
 
-        90% {
+        80% {
           transform-origin: right;
           width: 50%;
           height: 5px;
@@ -130,7 +138,7 @@ section.about-me {
           left: unset;
         }
 
-        to {
+        95% {
           transform-origin: left;
           bottom: 0;
           right: 50%;
@@ -139,7 +147,11 @@ section.about-me {
           width: 5px;
           height: 5px;
           background-color: var(--fc-second);
+        }
 
+        to {
+          width: 0;
+          height: 0;
         }
       }
 
@@ -176,9 +188,5 @@ section.about-me {
   section.about-me {
     flex-direction: row;
     align-items: flex-start;
-
-    .wrapper-right {
-      padding-top: 30px;
-    }
   }
 }

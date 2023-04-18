@@ -16,10 +16,13 @@
 
 
   <div *ngIf="isMenuOpen" class="dropdown-menu">
-    <div *ngFor="let navLink of navLinkData; let i = index;" class="nav-border">
-      <a class="nav-links" href="{{ navLinkData[i].link }}" (click)="toggleMenu()">{{ navLinkData[i].text }}</a>
-      <div class="nav-border-left"></div>
-      <div class="nav-border-bottom"></div>
+    <div class="link-wrapper">
+
+      <div *ngFor="let navLink of navLinkData; let i = index;" class="nav-border">
+        <a class="nav-links" href="{{ navLinkData[i].link }}" (click)="toggleMenu()">{{ navLinkData[i].text }}</a>
+        <div class="nav-border-left"></div>
+        <div class="nav-border-bottom"></div>
+      </div>
     </div>
   </div>
 
