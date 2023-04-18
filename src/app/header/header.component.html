@@ -8,7 +8,7 @@
     <span class="green rotate-left">]</span>
   </a>
 
-  <div id="burgerMenu" class="burger-menu" (click)="toggleMenu()">
+  <div id="burgerMenu" [ngClass]="{'burger-cross': isMenuOpen, 'burger-menu': !isMenuOpen}" (click)="toggleMenu()">
     <span id="span-1"></span>
     <span id="span-2"></span>
     <span id="span-3"></span>
