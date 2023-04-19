@@ -230,15 +230,12 @@ section.portfolio {
       color: black;
       transition: all 125ms ease-in-out;
 
-
       &:hover {
         outline: 1px solid var(--fc-second);
         border: 4px solid var(--fc-second);
         color: var(--fc-second);
         transform: scaleX(1.05);
         transition: all 125ms ease-in-out;
-
-
       }
     }
 

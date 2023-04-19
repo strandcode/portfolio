@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,12 +15,20 @@ export class HeaderComponent {
     { link: "#mySkills", text: "My skills" },
     { link: "#myPortfolio", text: "My portfolio" },
     { link: "#contactMe", text: "Contact me" },
-    { link: "./imprint/", text: "Legal notice" },
-    // { link: "#", text: "Privacy policy" }
-  ]
+  ];
+
+  constructor(private router: Router) {
+
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+
+  scrollToPrivacy() {
+    this.router.navigateByUrl('/imprint');
+    document.getElementById('privacy')?.scrollIntoView();
   }
 
 }

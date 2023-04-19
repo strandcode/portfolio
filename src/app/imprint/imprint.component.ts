@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-imprint',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./imprint.component.scss']
 })
 export class ImprintComponent {
+
+  @ViewChild('privacy') scrollTarget: ElementRef | undefined;
+
+  ngAfterViewInit(): void {
+    if (this.scrollTarget) {
+      this.scrollTarget.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 }
