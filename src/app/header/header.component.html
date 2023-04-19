@@ -37,7 +37,11 @@
         <div class="nav-border-bottom"></div>
       </div>
 
-      <a class="nav-links" (click)="scrollToPrivacy();toggleMenu();">Privacy TEST</a>
+      <div class="nav-border">
+        <a class="nav-links" routerLink="/imprint" (click)="scrollToPrivacy();toggleMenu();">Privacy policy</a>
+        <div class="nav-border-left"></div>
+        <div class="nav-border-bottom"></div>
+      </div>
 
       <!-- TODO  <div class="nav-border">
         <a class="nav-links" routerLink="/imprint" (click)="toggleMenu()">Privacy policy</a>

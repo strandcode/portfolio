@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   isMenuOpen: boolean = false;
+  // public isPrivacyLink: boolean = true;
 
   navLinkData = [
     { link: "#home", text: "Home" },
@@ -27,8 +28,10 @@ export class HeaderComponent {
 
 
   scrollToPrivacy() {
-    this.router.navigateByUrl('/imprint');
-    document.getElementById('privacy')?.scrollIntoView();
+    const privacyElement = document.getElementById('privacy');
+    if (privacyElement) {
+      privacyElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 }

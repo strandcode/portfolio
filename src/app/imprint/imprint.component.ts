@@ -7,12 +7,15 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ImprintComponent {
 
-  @ViewChild('privacy') scrollTarget: ElementRef | undefined;
 
-  ngAfterViewInit(): void {
-    if (this.scrollTarget) {
-      this.scrollTarget.nativeElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+
+  // @ViewChild('privacy') scrollTarget: ElementRef | undefined;
+
+  // ngAfterViewInit(): void {
+  //   // FIXME && this.isPrivacyLink
+  //   if (this.scrollTarget) {
+  //     this.scrollTarget.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  // }
+  // }
 
 }
