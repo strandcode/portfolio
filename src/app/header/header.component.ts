@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LinkService } from '../link.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   isMenuOpen: boolean = false;
-  // public isPrivacyLink: boolean = true;
+
+
 
   navLinkData = [
     { link: "#home", text: "Home" },
@@ -18,20 +20,20 @@ export class HeaderComponent {
     { link: "#contactMe", text: "Contact me" },
   ];
 
-  constructor(private router: Router) {
+  constructor(private linkservice: LinkService) {
 
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.linkservice.isPrivacyLink = false;
+    console.log(this.linkservice.isPrivacyLink);
   }
 
 
   scrollToPrivacy() {
-    const privacyElement = document.getElementById('privacy');
-    if (privacyElement) {
-      privacyElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.linkservice.isPrivacyLink = true;
+    console.log(this.linkservice.isPrivacyLink);
   }
 
 }

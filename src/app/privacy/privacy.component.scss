@@ -1,0 +1,19 @@
+section.privacy {
+  min-height: calc(100dvh - 174px);
+  padding-top: 100px;
+  font-family: var(--ff-overpass);
+
+  p {
+    text-align: justify;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--fc-second);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}

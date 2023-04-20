@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { LinkService } from '../link.service';
 
 @Component({
   selector: 'app-imprint',
@@ -7,15 +8,17 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ImprintComponent {
 
+  constructor(private linkservice: LinkService) { }
 
 
-  // @ViewChild('privacy') scrollTarget: ElementRef | undefined;
+  @ViewChild('privacy') scrollTarget: ElementRef | undefined;
 
-  // ngAfterViewInit(): void {
-  //   // FIXME && this.isPrivacyLink
-  //   if (this.scrollTarget) {
-  //     this.scrollTarget.nativeElement.scrollIntoView({ behavior: 'smooth' });
-  // }
-  // }
+  ngAfterViewInit(): void {
+    let isPrivacyLink = this.linkservice.isPrivacyLink;
+    console.log(isPrivacyLink);
+    if (this.scrollTarget) {
+      this.scrollTarget.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 }

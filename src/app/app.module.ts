@@ -15,6 +15,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { StartComponent } from './start/start.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactFormComponent,
     ImprintComponent,
     StartComponent,
+    PrivacyComponent,
   ],
   imports: [
     BrowserModule,

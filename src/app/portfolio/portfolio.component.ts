@@ -13,7 +13,7 @@ export class PortfolioComponent {
       portfolioImage: "./assets/img/portfolio-join.png",
       portfolioSkills: "JavaScript | CSS | HTML",
       portfolioDescription: "Task manager inspired by the Kanban Sytem. Create and organize tasks using drag and drop functions, assign users and categories.",
-      portfolioLink: "https://sascha-schroeder.developerakademie.net/join/",
+      portfolioLink: "https://strandco.de/join/",
       portfolioLinkGitHub: "https://github.com/strandcode/join"
     },
     {
@@ -21,7 +21,7 @@ export class PortfolioComponent {
       portfolioImage: "./assets/img/portfolio-el-pollo-loco.png",
       portfolioSkills: "JavaScript | CSS | HTML",
       portfolioDescription: "A simple jump-and-run game based on an object-oriented approach. Help Pepe to find coins an fight against the angry rooster.",
-      portfolioLink: "https://sascha-schroeder.developerakademie.net/el-pollo-loco/",
+      portfolioLink: "https://strandco.de/el-pollo-loco/",
       portfolioLinkGitHub: "https://github.com/strandcode/el-pollo-loco"
     },
     // {
@@ -37,7 +37,7 @@ export class PortfolioComponent {
       portfolioImage: "./assets/img/portfolio-pokedex.png",
       portfolioSkills: "JavaScript | API | CSS | HTML",
       portfolioDescription: "Based on the PokéAPI a simple library that provides and catalogues pokémon information.",
-      portfolioLink: "https://sascha-schroeder.developerakademie.net/pokedex/",
+      portfolioLink: "https://strandco.de/pokedex/",
       portfolioLinkGitHub: "https://github.com/strandcode/pokedex"
     },
   ];
