@@ -31,7 +31,7 @@ export class ContactFormComponent {
     formData.append('email', emailField.value);
     formData.append('message', messageField.value);
     //senden 
-    await fetch('https://www.strandco.de/send_mail/send_mail.php', {
+    await fetch('./send_mail.php', {
       method: 'POST',
       body: formData
     })
