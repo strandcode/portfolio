@@ -2,12 +2,14 @@
   <div class="frame">
 
     <h2>My skills</h2>
+    <div #skillWrapper class="skill-wrapper">
 
-    <div *ngFor="let skill of skills; let i = index" class="skill-item">
-      <img src="{{ skill.skillIconPath }}" alt="{{ skill.skillName }}">
-      <span>{{ skill.skillName }}</span>
+      <div *ngFor="let skill of skills; let i = index" class="skill-item">
+        <img src="{{ skill.skillIconPath }}" alt="{{ skill.skillName }}">
+        <span>{{ skill.skillName }}</span>
+      </div>
+
     </div>
-
 
   </div>
 

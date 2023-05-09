@@ -18,6 +18,7 @@ export class SkillsComponent {
     { skillName: "REST-Api", skillIconPath: "./assets/img/skill-rest-api.png" },
     { skillName: "Scrum", skillIconPath: "./assets/img/skill-scrum.png" },
     { skillName: "Material-Design", skillIconPath: "./assets/img/skill-material-design.png" },
-  ]
+  ];
+
 
 }

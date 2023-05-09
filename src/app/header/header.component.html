@@ -17,13 +17,6 @@
 
   <div *ngIf="isMenuOpen" class="dropdown-menu">
     <div class="link-wrapper">
-      <!-- <a href="#mySkills" class="nav-links" (click)="toggleMenu()">mySkills href TEST</a>
-      <a routerLink="/" [queryParams]="{ fragment: 'mySkills' }" class="nav-links" (click)="toggleMenu()">mySkills
-        routerLink TEST</a> -->
-
-      <!-- <a routerLink="/imprint" class="nav-links" (click)="toggleMenu()">Impressum routerLink TEST</a>-->
-
-
 
       <div *ngFor="let navLink of navLinkData; let i = index;" class="nav-border">
         <a class="nav-links" href="{{ navLinkData[i].link }}" (click)="toggleMenu()">{{ navLinkData[i].text }}</a>
@@ -32,13 +25,13 @@
       </div>
 
       <div class="nav-border">
-        <a class="nav-links" routerLink="/imprint" (click)="toggleMenu()" target="_blank">Legal notice</a>
+        <a class="nav-links" routerLink="/imprint" (click)="toggleMenu()">Legal notice</a>
         <div class="nav-border-left"></div>
         <div class="nav-border-bottom"></div>
       </div>
 
       <div class="nav-border">
-        <a class="nav-links" routerLink="/privacy" (click)="toggleMenu();" target="_blank">Privacy policy</a>
+        <a class="nav-links" routerLink="/privacy" (click)="toggleMenu();">Privacy policy</a>
         <div class="nav-border-left"></div>
         <div class="nav-border-bottom"></div>
       </div>
